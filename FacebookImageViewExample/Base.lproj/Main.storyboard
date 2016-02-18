@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,66 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="pks-Hp-Gza" customClass="FBSDKProfilePictureView">
+                                <rect key="frame" x="270" y="28" width="60" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="3Vf-gO-zPt"/>
+                                    <constraint firstAttribute="height" constant="60" id="CVZ-V0-ffv"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gnq-b0-9G5">
+                                <rect key="frame" x="149" y="96" width="303" height="58"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3T-7f-0AI">
+                                        <rect key="frame" x="223" y="14" width="72" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="WjG-DO-3n4"/>
+                                            <constraint firstAttribute="width" constant="72" id="gZh-Gr-fvZ"/>
+                                        </constraints>
+                                        <state key="normal" title="Invalidate"/>
+                                        <connections>
+                                            <action selector="touchUpInsideInvalidateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZOO-xO-XVX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufz-yi-eHU" customClass="FBSDKLoginButton">
+                                        <rect key="frame" x="8" y="14" width="100" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="L4P-LB-faf"/>
+                                            <constraint firstAttribute="width" constant="100" id="bbB-mb-6Lx"/>
+                                        </constraints>
+                                        <state key="normal" title="Login"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="3Oj-RI-RS0"/>
+                                    <constraint firstItem="L3T-7f-0AI" firstAttribute="top" secondItem="gnq-b0-9G5" secondAttribute="top" constant="14" id="Q5C-oq-GgQ"/>
+                                    <constraint firstAttribute="width" constant="303" id="TCX-ZG-bhU"/>
+                                    <constraint firstAttribute="bottom" secondItem="L3T-7f-0AI" secondAttribute="bottom" constant="14" id="Un7-UW-bjj"/>
+                                    <constraint firstItem="ufz-yi-eHU" firstAttribute="leading" secondItem="gnq-b0-9G5" secondAttribute="leading" constant="8" id="bMI-pz-5Rl"/>
+                                    <constraint firstAttribute="trailing" secondItem="L3T-7f-0AI" secondAttribute="trailing" constant="8" id="bO6-1u-ffP"/>
+                                    <constraint firstAttribute="bottom" secondItem="ufz-yi-eHU" secondAttribute="bottom" constant="14" id="nDH-0q-tYn"/>
+                                    <constraint firstItem="ufz-yi-eHU" firstAttribute="top" secondItem="gnq-b0-9G5" secondAttribute="top" constant="14" id="vLM-qs-oOc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gnq-b0-9G5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-175" id="1N9-HF-FcQ"/>
+                            <constraint firstItem="gnq-b0-9G5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1rw-OS-8YP"/>
+                            <constraint firstItem="pks-Hp-Gza" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ade-2p-1k4"/>
+                            <constraint firstItem="pks-Hp-Gza" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="HoC-BQ-0i4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="profileImageView" destination="pks-Hp-Gza" id="Lud-32-uFs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="769" y="601"/>
         </scene>
     </scenes>
 </document>
