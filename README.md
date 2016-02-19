@@ -1,6 +1,5 @@
 ## Description
-This  application is a sample to comprehend the pull request. 
-facebook/facebook-ios-sdk#816
+This  application is a sample to comprehend the [pull request](https://github.com/facebook/facebook-ios-sdk/pull/816). 
 
 You can use this account to perform a login.
 
